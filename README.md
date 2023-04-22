@@ -1,6 +1,6 @@
 # Re-apply
 I apologise for the unfinished work in the branches.
-But I don't agree with you that we have identical code to Goncharuk, I used your examples. Yes, we did discuss the task, but we compared diff in our gits, it's different. I attach a screenshot as proof
+But I don't agree with you that we have identical code to Honcharuk, I used your examples. Yes, we did discuss the task, but we compared diff in our gits, it's different. I attach a screenshot as proof
 ## Total overview
 ![image](https://user-images.githubusercontent.com/45720171/233779192-77ee0914-99f1-4134-a182-5971a57a8b49.png)
 ## Open diffs
