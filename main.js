@@ -124,7 +124,6 @@ function draw() {
 
     /* Set the values of the projection transformation */
     let projection = m4.perspective(Math.PI / 32, 1, 8, 12);
-    // let projection = m4.orthographic(-10, 10, -10, 10, -10, 10);
     let conv, // convergence
         eyes, // eye separation
         ratio, // aspect ratio
@@ -155,8 +154,6 @@ function draw() {
 
     left = -b * near / conv;
     right = c * near / conv;
-
-    // console.log(left, right, bottom, top, near, far);
 
     let projectionLeft = m4.orthographic(left, right, bottom, top, near, far);
 
@@ -229,13 +226,6 @@ function draw() {
     surface.Draw();
 
     gl.colorMask(true, true, true, true);
-    // gl.uniform1f(shProgram.iScale, -1.0)
-    // let a = 2 - 1;
-    // let c = -2 * Math.PI * a / Math.tan(-0.5);
-    // let b = 3 * c / 4;
-    // let trS = cojugation(map(userPointCoord.x, 0, 1, 0, b), map(userPointCoord.y, 0, 1, 0, Math.PI * 2), a, c)
-    // gl.uniform3fv(shProgram.iUP, [trS.x, trS.y, trS.z]);
-    // sphere.DrawPoint();
     window.requestAnimationFrame(draw)
 }
 
@@ -255,9 +245,7 @@ function CreateSurfaceData() {
     let j = 0;
     let a = 2 - 1
     let c = -2 * Math.PI * a / Math.tan(-0.5);
-    // console.log(c)
     let b = 3 * c / 4
-    // console.log(b)
     while (i < b) {
         while (j < Math.PI * 2) {
             let v1 = cojugation(i, j, a, c)
@@ -506,7 +494,6 @@ function init() {
 
     spaceball = new TrackballRotator(canvas, draw, 0);
 
-    // window.requestAnimationFrame(draw_);
     draw()
 }
 
@@ -566,8 +553,6 @@ function LoadTexture() {
     gl.bindTexture(gl.TEXTURE_2D, texture);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-
-    // gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 512, 512, 0, );
 
     const image = new Image();
     image.crossOrigin = 'anonymus';
