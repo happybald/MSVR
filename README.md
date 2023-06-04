@@ -1,3 +1,7 @@
+# Fix of perspective
+![image](https://github.com/happybald/MSVR/assets/45720171/d1597305-d353-4d76-8426-265dd695485a)
+I changed the projection from orthographic to perspective(frustum)
+![Animation-min](https://github.com/happybald/MSVR/assets/45720171/72544137-7e15-4ab2-a4fe-122cc258321b)
 # Re-apply
 I apologise for the unfinished work in the branches.
 But I don't agree with you that we have identical code to Honcharuk, I used your examples. Yes, we did discuss the task, but we compared diff in our gits, it's different. I attach a screenshot as proof
